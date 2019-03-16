@@ -1,9 +1,12 @@
 FROM beevelop/android-nodejs
 
-MAINTAINER Maik Hummel <m@ikhummel.com>
+MAINTAINER 19317362 <19317362@qq.com>
 
-ENV CORDOVA_VERSION 8.0.0
 
 WORKDIR "/tmp"
 
-RUN npm i -g --unsafe-perm cordova@${CORDOVA_VERSION}
+RUN \
+    apt update \
+    && apt upgrade -y \
+    && apt install -y imagemagick \
+    && npm i -g --unsafe-perm cordova ionic cordova-icon cordova-splash node-sass
