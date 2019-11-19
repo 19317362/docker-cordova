@@ -15,4 +15,6 @@ RUN \
     && apt upgrade -y \
     && apt install -y imagemagick python3 \
     && npm i -g --unsafe-perm cordova ionic cordova-icon cordova-splash node-sass cordova-res nrm \
+    && git config --global user.email "19317362@qq.com" \
+    && git config --global user.name "19317352" \
     && nrm use taobao
