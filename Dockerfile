@@ -14,4 +14,5 @@ RUN \
     apt update \
     && apt upgrade -y \
     && apt install -y imagemagick python3 \
-    && npm i -g --unsafe-perm cordova ionic cordova-icon cordova-splash node-sass cordova-res
+    && npm i -g --unsafe-perm cordova ionic cordova-icon cordova-splash node-sass cordova-res nrm \
+    && nrm use taobao
