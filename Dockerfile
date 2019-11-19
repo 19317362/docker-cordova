@@ -13,7 +13,7 @@ WORKDIR "/tmp"
 RUN \
     apt update \
     && apt upgrade -y \
-    && apt install -y imagemagick python3 \
+    && apt install -y imagemagick python3 iputils-ping\
     && npm i -g --unsafe-perm cordova ionic cordova-icon cordova-splash node-sass cordova-res nrm \
     && git config --global user.email "19317362@qq.com" \
     && git config --global user.name "19317352" \
