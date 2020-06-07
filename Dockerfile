@@ -27,6 +27,7 @@ RUN \
     && git config --global user.email "19317362@qq.com" \
     && git config --global user.name "19317352" \
     && nrm use taobao \
+    && useradd --uid 501 --create-home --shell /bin/bash u501 \
   && useradd --uid 1001 --create-home --shell /bin/bash u1001 \
   && useradd --uid 1002 --create-home --shell /bin/bash u1002 \
   && useradd --uid 1003 --create-home --shell /bin/bash u1003 \
@@ -47,6 +48,7 @@ RUN \
   && useradd --uid 1018 --create-home --shell /bin/bash u1018 \
   && useradd --uid 1019 --create-home --shell /bin/bash u1019 \  
   && useradd --uid 1020 --create-home --shell /bin/bash u1020 \
+  && echo "u501 ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers \
   && echo "u1000 ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers \
   && echo "u1001 ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers \
   && echo "u1002 ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers \
